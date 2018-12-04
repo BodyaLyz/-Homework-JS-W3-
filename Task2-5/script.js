@@ -25,6 +25,7 @@ async function externalPromise() {
 
 //Task5
 function searchPrime(num) {
+    if (num < 1) return false;
     for (var i = 2; i < num; i++) {
         if (num % i == 0)
             return false;
@@ -32,7 +33,7 @@ function searchPrime(num) {
     return true;
 }
 
-function func(n) {
+function isPrime(n) {
     for (var i = n; i > 0; i--) {
         if (searchPrime(i)) console.log(' ' + (i));
     }
